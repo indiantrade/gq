@@ -119,10 +119,10 @@
                 </p>
             </div>
 
-            <!-- Mobile-Friendly Single Call To Action Button with Subscribe Pixel Tracking -->
+            <!-- Single Focus Telegram Button -->
             <div class="pt-2 w-full">
-                <a href="https://t.me/+0ufj8-yfwGY4NmQ1" target="_blank" rel="noopener noreferrer" onclick="trackSubscribe()" class="glow-button w-full flex items-center justify-center gap-3 text-white font-bold text-base sm:text-lg py-4 px-6 rounded-2xl transition-all duration-200">
-                    <i class="fa-brands fa-telegram text-22px text-2xl"></i>
+                <a href="https://t.me/+0ufj8-yfwGY4NmQ1" target="_blank" rel="noopener noreferrer" class="glow-button w-full flex items-center justify-center gap-3 text-white font-bold text-base sm:text-lg py-4 px-6 rounded-2xl transition-all duration-200">
+                    <i class="fa-brands fa-telegram text-2xl"></i>
                     <span>JOIN TELEGRAM</span>
                 </a>
                 <p class="text-[11px] text-slate-400 mt-2.5 font-medium flex items-center justify-center gap-1.5">
@@ -202,12 +202,6 @@
     </div>
 
     <script>
-        function trackSubscribe() {
-            if (typeof fbq === 'function') {
-                fbq('track', 'Subscribe');
-            }
-        }
-
         const policies = {
             privacy: "We value your privacy. No personal identifying information or financial data is collected or stored on this mobile page. Joining our Telegram community is entirely voluntary.",
             terms: "By clicking JOIN TELEGRAM, you acknowledge that you are entering an educational channel. All chart studies and market discussions are strictly for educational learning and not financial recommendations.",
