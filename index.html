@@ -1,165 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi" class="dark">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> GUJRATI TRADER - Learning Community</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐆𝐀𝐔𝐓𝐀𝐌 - Professional Market Analytics & Learning</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2114785742458821');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
 
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  }
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
 
-  .card {
-    width: 85%;
-    max-width: 340px; 
-    background: #010a0f;
-    border: 1.5px solid #00d2ff;
-    border-radius: 35px;
-    padding: 20px 15px;
-    text-align: center;
-    box-shadow: 0 0 25px rgba(0, 210, 255, 0.15);
-  }
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            -webkit-tap-highlight-color: transparent; 
+            touch-action: manipulation;
+        }
+        
+        .glass-card { 
+            background: rgba(15, 23, 42, 0.8); 
+            backdrop-filter: blur(16px); 
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+        }
 
-  .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 3px solid #00d2ff;
-    object-fit: cover;
-    margin-top: -5px;
-    box-shadow: 0 0 15px #00d2ff;
-  }
+        .glow-button { 
+            background: linear-gradient(135deg, #0088cc 0%, #00a8ff 100%); 
+            box-shadow: 0 10px 30px -5px rgba(0, 136, 204, 0.6); 
+        }
+        
+        .glow-button:active { 
+            transform: scale(0.97); 
+        }
 
-  h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 15px 0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .features {
-    text-align: left;
-    margin: 0 auto;
-    width: 90%;
-  }
-
-  .feature-item {
-    color: #ccc;
-    font-size: 13px;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    display: flex;
-    align-items: center;
-  }
-
-  .feature-item:last-child { border-bottom: none; }
-
-  .icon { margin-right: 12px; font-size: 16px; }
-
-  .join-text {
-    color: #eee;
-    font-size: 12px;
-    margin: 20px 0 12px;
-    font-weight: 300;
-  }
-
-  .telegram-btn {
-    display: block;
-    background: linear-gradient(90deg, #00d2ff 0%, #9247ff 100%);
-    color: white;
-    text-decoration: none;
-    padding: 14px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.3);
-  }
-
-  .hindi-quote {
-    color: #bbb;
-    font-size: 13px;
-    margin-bottom: 20px;
-    line-height: 1.4;
-  }
-
-  .footer-box {
-    border: 1px solid rgba(0, 210, 255, 0.2);
-    border-radius: 12px;
-    padding: 8px;
-    font-size: 11px;
-    color: #888;
-  }
-
-  /* Link styling for Agency */
-  .footer-box a { 
-    color: #00d2ff; 
-    font-weight: bold; 
-    text-decoration: none;
-  }
-
-  .disclaimer {
-    font-size: 9px;
-    color: #444;
-    margin-top: 12px;
-  }
-</style>
+        .ambient-bg {
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.15), transparent 60%),
+                radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.1), transparent 50%);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-cyan-500 selection:text-white ambient-bg overflow-x-hidden">
 
-<div class="card">
-  <img src="https://i.ibb.co/GQYGXHF4/In-Shot-20260927-223648191.jpg" alt=" GUJRATI TRADER" class="profile-img">
+    <!-- Meta Pixel Noscript Fallback -->
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2114785742458821&ev=PageView&noscript=1"
+    /></noscript>
 
-  <h1> GUJRATI TRADER</h1>
+    <!-- SEBI Mandatory Risk Warning Top Banner -->
+    <div class="bg-amber-950/95 border-b border-amber-500/30 text-amber-200 text-[11px] sm:text-xs px-3 py-2.5 text-center relative z-20">
+        <div class="max-w-xl mx-auto flex items-center justify-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation text-amber-400 shrink-0 text-xs"></i>
+            <p class="leading-tight font-medium text-left sm:text-center">
+                <strong class="font-bold text-amber-300">SEBI Regulatory Warning:</strong> 9 out of 10 individual traders in Equity F&O incur net losses.
+            </p>
+        </div>
+    </div>
 
-  <div class="features">
-    <div class="feature-item"><span class="icon"></span> Learning & Educational Sessions</div>
-    <div class="feature-item"><span class="icon"></span> Market Concepts & Awareness</div>
-    <div class="feature-item"><span class="icon"></span> Chart Reading Concepts</div>
-    <div class="feature-item"><span class="icon"></span> Educational Case Discussions</div>
-  </div>
+    <!-- Main Container -->
+    <main class="flex-grow flex flex-col items-center justify-center px-4 py-6 sm:py-10 relative z-10 w-full max-w-md mx-auto">
+        <div class="w-full text-center space-y-6">
+            
+            <!-- Professional Logo Area with Live Badge -->
+            <div class="relative inline-block group mx-auto pt-2">
+                <div class="absolute -inset-2 bg-gradient-to-tr from-cyan-400 via-blue-500 to-indigo-600 rounded-full blur-xl opacity-40"></div>
+                
+                <div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-slate-900 shadow-2xl p-1 bg-gradient-to-br from-slate-700 to-slate-900 overflow-hidden mx-auto">
+                    <img src="https://iili.io/nXezqp1.jpg" alt="𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐆𝐀𝐔𝐓𝐀𝐌 Logo" class="w-full h-full rounded-full object-cover shadow-inner">
+                </div>
 
-  <p class="join-text">Join our learning community and grow your knowledge</p>
+                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-slate-950/90 backdrop-blur-md border border-emerald-500/40 text-emerald-400 text-[10px] font-bold px-3.5 py-1 rounded-full uppercase tracking-widest flex items-center gap-1.5 shadow-xl z-20 whitespace-nowrap">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    Live Community
+                </div>
+            </div>
 
-  <a href="https://t.me/+mc6hSYTJFoU0MmRl" class="telegram-btn">JOIN TELEGRAM</a>
+            <!-- Channel Title & Subheading -->
+            <div class="space-y-2 pt-1">
+                <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white px-2">
+                    𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐆𝐀𝐔𝐓𝐀𝐌
+                </h1>
+                <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed px-2">
+                    Stock Market Analytics, Educational Chart Studies & Daily Nifty/BankNifty Price Action Levels
+                </p>
+            </div>
 
-  <p class="hindi-quote">     ,     </p>
+            <!-- Mobile-Friendly Single Call To Action Button with Subscribe Pixel Tracking -->
+            <div class="pt-2 w-full">
+                <a href="https://t.me/+0ufj8-yfwGY4NmQ1" target="_blank" rel="noopener noreferrer" onclick="trackSubscribe()" class="glow-button w-full flex items-center justify-center gap-3 text-white font-bold text-base sm:text-lg py-4 px-6 rounded-2xl transition-all duration-200">
+                    <i class="fa-brands fa-telegram text-22px text-2xl"></i>
+                    <span>JOIN TELEGRAM</span>
+                </a>
+                <p class="text-[11px] text-slate-400 mt-2.5 font-medium flex items-center justify-center gap-1.5">
+                    <i class="fa-solid fa-lock text-slate-500 text-xs"></i> Free Daily Market Updates & Learning Resources
+                </p>
+            </div>
 
-  <div class="footer-box">
-    This Channel Advertise By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
-  </div>
+            <!-- Features Highlights Card -->
+            <div class="glass-card rounded-2xl p-4 sm:p-5 text-left space-y-3.5 text-xs sm:text-sm text-slate-300 shadow-xl">
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0 mt-0.5">
+                        <i class="fa-solid fa-chart-line text-cyan-400 text-sm"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-xs sm:text-sm">Daily Market Analysis</h4>
+                        <p class="text-slate-400 text-[11px] sm:text-xs mt-0.5">Educational support/resistance levels for Nifty & Bank Nifty.</p>
+                    </div>
+                </div>
 
-  <div class="disclaimer">
-    Terms | Privacy | Disclaimer <br>
-    This site is not part of Facebook� or endorsed by Facebook�.
-  </div>
-</div>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2552096918611818');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2552096918611818&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0 mt-0.5">
+                        <i class="fa-solid fa-graduation-cap text-cyan-400 text-sm"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-xs sm:text-sm">Trading Education</h4>
+                        <p class="text-slate-400 text-[11px] sm:text-xs mt-0.5">Price action concepts, chart patterns & technical learning.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0 mt-0.5">
+                        <i class="fa-solid fa-shield-halved text-cyan-400 text-sm"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-xs sm:text-sm">Risk Control Framework</h4>
+                        <p class="text-slate-400 text-[11px] sm:text-xs mt-0.5">Guidance on discipline, stop-loss strategy & proper sizing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Meta Compliance Disclaimer Box -->
+            <div class="text-[10px] sm:text-[11px] text-slate-400 leading-relaxed bg-slate-900/60 p-3.5 rounded-xl border border-slate-800/80 text-justify">
+                <p>
+                    <strong class="text-slate-300">Disclaimer:</strong> Content is strictly for educational and learning purposes only. We are NOT a SEBI-registered advisor. Derivatives trading carries high financial risk.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Mobile-Optimized Footer -->
+    <footer class="border-t border-slate-800/80 bg-slate-950/90 py-5 px-4 text-center text-xs text-slate-500 space-y-2.5 relative z-10">
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 text-slate-400 font-medium text-[11px]">
+            <button onclick="openModal('privacy')" class="hover:text-cyan-400 transition-colors">Privacy Policy</button>
+            <span>•</span>
+            <button onclick="openModal('terms')" class="hover:text-cyan-400 transition-colors">Terms of Service</button>
+            <span>•</span>
+            <button onclick="openModal('disclaimer')" class="hover:text-cyan-400 transition-colors">SEBI Disclaimer</button>
+        </div>
+        
+        <p class="text-slate-500 text-[11px]">© 2026 𝐓𝐑𝐀𝐃𝐄 𝐖𝐈𝐓𝐇 𝐆𝐀𝐔𝐓𝐀𝐌. All rights reserved.</p>
+
+        <p class="text-slate-400 text-[11px] pt-0.5">
+            Promoted By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank" rel="noopener" class="text-cyan-400 font-semibold hover:underline">AD BUILD AGENCY</a>
+        </p>
+    </footer>
+
+    <!-- Legal Policy Popup Modal -->
+    <div id="legalModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-700/80 rounded-2xl max-w-md w-full max-h-[80vh] flex flex-col overflow-hidden shadow-2xl">
+            <div class="p-4 border-b border-slate-800 flex justify-between items-center bg-slate-950/50">
+                <h3 id="modalTitle" class="font-bold text-white text-sm">Policy</h3>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white text-2xl font-bold w-8 h-8 flex items-center justify-center rounded-lg">&times;</button>
+            </div>
+            <div id="modalContent" class="p-4 overflow-y-auto text-xs text-slate-300 leading-relaxed space-y-3"></div>
+        </div>
+    </div>
+
+    <script>
+        function trackSubscribe() {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Subscribe');
+            }
+        }
+
+        const policies = {
+            privacy: "We value your privacy. No personal identifying information or financial data is collected or stored on this mobile page. Joining our Telegram community is entirely voluntary.",
+            terms: "By clicking JOIN TELEGRAM, you acknowledge that you are entering an educational channel. All chart studies and market discussions are strictly for educational learning and not financial recommendations.",
+            disclaimer: "SEBI Disclaimer: We are NOT SEBI registered research analysts or advisors. Derivatives trading in Equity Futures & Options carries high financial risk. Users are advised to trade responsibly and perform independent risk assessments."
+        };
+
+        function openModal(type) {
+            document.getElementById('modalTitle').innerText = type.toUpperCase() + " POLICY";
+            document.getElementById('modalContent').innerText = policies[type];
+            document.getElementById('legalModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('legalModal').classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
